@@ -1,0 +1,130 @@
+body {
+  width: 90%;
+  margin: 0 auto;
+  color: #222222;
+  font-family: 'Lato';
+  font-weight: 300;
+}
+  
+.intro {
+  text-align: center;
+  display: block;
+  padding-bottom: 0.5em;
+  margin: 0 auto;
+}
+
+.wrapper {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.cta {
+  font-size: 1.5rem;
+}
+
+.gauge {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.gauge_index {
+	position: absolute;
+	margin-top: 135px;
+	margin-left: 92px;
+	color: #fff;
+}
+
+.gauge__values span {
+  width: 180px;
+  position: absolute;
+  color: #fff;
+  left: 12%;
+  top: 48%;
+}
+.yellow .gauge__values, .orange .gauge__values {
+  color: #000;
+}
+
+.gauge_value, .gauge_rating {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+}
+
+.gauge_value {
+  font-size: .5em;
+}
+
+.gauge_rating {
+  font-size: 1.2em;
+  letter-spacing: .1em;
+}
+
+svg {
+  display: block;
+  margin: 1em auto 0;
+}
+
+.outer_ring {
+	fill: none;
+}
+
+.spinner {
+  fill: #63ea63;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  transform-origin: 120px 120px;
+  transition: all 1s;
+}
+.green .spinner {
+  fill: #63ea63;
+  transform: rotate(75deg);
+}
+.yellow .spinner {
+  fill: #ffde59;
+  transform: rotate(125deg);
+}
+.orange .spinner {
+  fill: #ff7b00;
+  transform: rotate(180deg);
+}
+.red .spinner {
+  fill: #d62d20;
+  transform: rotate(230deg);
+}
+.black .spinner {
+  fill: #000000;
+  transform: rotate(280deg);
+}
+
+.ring_green {
+  fill: #63ea63;
+}
+
+.ring_yellow {
+  fill: #ffde59;
+}
+
+.ring_orange {
+  fill: #ff7b00;
+}
+
+.ring_red {
+  fill: #d62d20;
+}
+
+.ring_black {
+  fill: #000000;
+}
+
+.type {
+  fill: #fff;
+}
+
