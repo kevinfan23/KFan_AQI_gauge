@@ -28,6 +28,7 @@ function spinner() {
       }
     ];
 
+	// Convert aqi inidex from Breezometer standard to US/CHN standard
 	var aqi_color = 0;
 	if (index <= 50) {
 		aqi_color = 0;
@@ -35,10 +36,10 @@ function spinner() {
 	else if (index > 50 && index <= 100) {
 		aqi_color = 1;
 	}
-	else if (index > 100 && index <= 150) {
+	else if (index > 100 && index <= 200) {
 		aqi_color = 2;
 	}
-	else if (index > 150 && index <= 300) {
+	else if (index > 200 && index <= 300) {
 		aqi_color = 3;
 	}
 	else {
@@ -55,10 +56,9 @@ function spinner() {
 function getAQI() {
     $.ajax({
         type:'GET',
-        url:"https://api.breezometer.com/baqi/?location=zhengzhou,+henan,+china&fields=breezometer_aqi&key=37d4b9c6e1c24609a4edee8d3eda9522",
+        url:"https://api.breezometer.com/baqi/?location=zhengzhou,+henan,+china&fields=country_aqi&key=37d4b9c6e1c24609a4edee8d3eda9522",
         success: function(data) {
-            index = data.breezometer_aqi;
-            index = (index/100)*500;
+            index = data.country_aqi;
         },
         dataType : 'json',
 

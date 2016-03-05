@@ -1,7 +1,6 @@
 body {
   width: 90%;
   margin: 0 auto;
-  color: #222222;
   font-family: 'Lato';
   font-weight: 300;
 }
@@ -76,31 +75,27 @@ svg {
 }
 
 .spinner {
-  fill: #63ea63;
-  stroke: #FFFFFF;
   stroke-width: 2;
+  stroke: rgba(0, 0, 0, 0.1);
   stroke-miterlimit: 10;
   transform-origin: 120px 120px;
   transition: all 1s;
+  box-shadow: 0px 2px 1px white inset, 0px -2px 5px white, 0px 2px 3px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+  fill: #bfbfbf;
 }
 .green .spinner {
-  fill: #63ea63;
   transform: rotate(75deg);
 }
 .yellow .spinner {
-  fill: #ffde59;
   transform: rotate(125deg);
 }
 .orange .spinner {
-  fill: #ff7b00;
   transform: rotate(180deg);
 }
 .red .spinner {
-  fill: #d62d20;
   transform: rotate(230deg);
 }
 .black .spinner {
-  fill: #000000;
   transform: rotate(280deg);
 }
 
